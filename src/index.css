@@ -1,10 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400&display=swap');
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --header-height: 3rem;
+  --nav-width: 68px;
+
+  /*===== Top bar =====*/
+  --top-bar-background: #808080;
+  --top-bar-color: #ff0;
+
+  /*===== button =====*/
+  --buttton-background: #cc0000;
+  --buttton-color: white;
+
+  /*===== Side nav =====*/
+  --side-nav-background: #cecece;
+  --side-nav-color: #2f4f4f;
+
+  /*===== main  =====*/
+  --main-background: white;
+  --main-color: #000000;
+
+  /*===== chatbox-border  =====*/
+  --chatbox-border: #cc0000;
+}
+
+[data-theme='dark'] {
+  /*===== Top bar =====*/
+  --top-bar-background: #c0c0c0;
+  --top-bar-color: #2f4f4f;
+
+  /*===== button =====*/
+  --buttton-background: #f0f8ff;
+  --buttton-color: #800080;
+
+  /*===== Side nav =====*/
+  --side-nav-background: white;
+  --side-nav-color: #696969;
+
+  /*===== main  =====*/
+  --main-background: #008080;
+  --main-color: white;
+
+  /*===== chatbox-border  =====*/
+  --chatbox-border: white;
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  transition: 0.5s;
+  font-family: 'Lato', sans-serif;
+}
+
+button {
+  background: var(--buttton-background);
+  color: var(--buttton-color);
+  padding: 1rem 3rem;
+  border-radius: 5px;
+  margin: 1rem 1rem 1rem 0;
+}
+
+textarea {
+  width: 180px;
+  height: 90px;
+}
+
+a {
+  text-decoration: none;
 }
 
 code {

@@ -1,0 +1,29 @@
+.homeContainer {
+  height: 100vh;
+  padding: 0 1rem;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  overflow: scroll;
+}
+
+.leftContainer {
+  flex-basis: 50%;
+}
+
+.rightContainer {
+  flex-basis: 40%;
+  max-width: 40%;
+}
+
+.btnsContainer {
+  max-height: 300px;
+  overflow: scroll;
+  width: 90;
+}
+
+@media screen and (max-width: 790px) {
+  .rightContainer {
+    max-width: 100%;
+  }
+}

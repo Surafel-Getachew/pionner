@@ -1,26 +1,26 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { useEffect } from 'react';
+import { Routes, Route } from 'react-router-dom';
+import Home from './pages/Home';
+import PageTwo from './pages/PageTwo';
+import './app.css';
+import { useTheme } from './context/themeProvider';
+const App = () => {
+  const { theme } = useTheme();
 
-function App() {
+  useEffect(() => {
+    document.documentElement.setAttribute('data-theme', theme);
+  }, [theme]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Routes>
+        <Route path='/'>
+          <Route path='/' element={<Home />} />
+          <Route path='pageTwo' element={<PageTwo />} />
+        </Route>
+      </Routes>
     </div>
   );
-}
+};
 
 export default App;

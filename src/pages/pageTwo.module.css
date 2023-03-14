@@ -1,0 +1,36 @@
+.pageTwoContainer {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+}
+.btnContainer {
+  padding: 0 1rem;
+}
+
+.okBtn {
+  background: #03f;
+  color: white;
+}
+
+.cancelBtn {
+  border: none;
+  background: transparent;
+  color: black;
+}
+
+.removeBtn {
+  background: #ffa500;
+  color: black;
+}
+
+.deleteBtn {
+  background: #cc0000;
+  color: white;
+}
+
+@media screen and (min-width: 768px) {
+  .btnContainer {
+    padding: 0;
+  }
+}
